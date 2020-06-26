@@ -7,23 +7,29 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0004_homepage_boolean'),
+        ("home", "0004_homepage_boolean"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='homepage',
-            name='aaa',
+            model_name="homepage",
+            name="aaa",
             field=models.EmailField(blank=True, max_length=254, null=True),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='aaaa',
+            model_name="homepage",
+            name="aaaa",
             field=models.URLField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='cccc',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='homepage_cccc', to='home.CustomText'),
+            model_name="homepage",
+            name="cccc",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="homepage_cccc",
+                to="home.CustomText",
+            ),
         ),
     ]
