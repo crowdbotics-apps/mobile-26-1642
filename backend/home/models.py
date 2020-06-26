@@ -26,6 +26,15 @@ class HomePage(models.Model):
     abc = models.BigIntegerField(null=True, blank=True,)
     abcd = models.DateField(null=True, blank=True,)
     boolean = models.BooleanField(null=True, blank=True,)
+    aaa = models.EmailField(max_length=254, null=True, blank=True,)
+    aaaa = models.URLField(null=True, blank=True,)
+    cccc = models.ForeignKey(
+        "home.CustomText",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="homepage_cccc",
+    )
 
     @property
     def api(self):
