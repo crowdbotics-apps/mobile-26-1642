@@ -25,6 +25,7 @@ class HomePage(models.Model):
     body = models.TextField()
     abc = models.BigIntegerField(null=True, blank=True,)
     abcd = models.DateField(null=True, blank=True,)
+    boolean = models.BooleanField(null=True, blank=True,)
 
     @property
     def api(self):
